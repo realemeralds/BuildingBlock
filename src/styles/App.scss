@@ -1,0 +1,323 @@
+@import "~bootstrap/scss/bootstrap";
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+@import "preflight.scss";
+* {
+  font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// color scheme
+$white: #ffffffff;
+$black: #071e22ff;
+
+$firstAccent: #2e294e;
+$secondAccent: #824c71ff;
+$thirdAccent: #a4b0f5ff;
+$fourthAccent: #0c8346ff;
+
+$headerAccent: #be97c6;
+$signUpBG: #8661c1;
+
+$fadedBackground: #e7dbea;
+$greyFaded: #91969a;
+
+$panelBG: #cbd2fb;
+
+.name {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px 20px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+
+  .headerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: start;
+
+    .headerIcon {
+      font-size: 30px;
+    }
+
+    .headerLogoText {
+      color: $firstAccent;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+      margin-left: 10px;
+
+      .headerAccent {
+        color: $headerAccent;
+      }
+    }
+  }
+
+  .headerNavigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    margin-left: -40px;
+
+    .headerLink {
+      margin-left: 40px;
+
+      text-align: center;
+      color: $greyFaded;
+      font-size: 16px;
+      font-weight: 600;
+
+      .active {
+        color: $black;
+      }
+    }
+  }
+
+  .headerEndContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+
+    font-weight: 600;
+
+    .userImage {
+      width: 36px;
+      height: 36px;
+      align-self: center;
+    }
+
+    .signInButton {
+      display: flex;
+      background: $fadedBackground;
+      padding: 10px;
+      border-radius: 8px;
+      margin-left: 15px;
+      height: min-content;
+
+      .signInText {
+        font-size: 14px;
+        color: $black;
+      }
+    }
+
+    .signUpButton {
+      background-color: $signUpBG;
+      padding: 10px;
+      border-radius: 8px;
+      height: min-content;
+      margin-left: 15px;
+
+      .signUpText {
+        font-size: 14px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.splash {
+  display: flex;
+  margin-left: 80px;
+  margin-right: 70px;
+  margin-top: 60px;
+  justify-content: space-between;
+  padding-top: 75px;
+
+  .splashText {
+    font-weight: 600;
+    font-size: 70px;
+    color: $firstAccent;
+    flex-grow: 1;
+    line-height: 1.1;
+  }
+
+  .splashSide {
+    display: flex;
+    flex-grow: 0;
+    width: 45vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .splashSideText {
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      color: $firstAccent;
+    }
+
+    .splashButton {
+      margin-top: 8px;
+
+      padding: 12px 12px;
+      background-color: $firstAccent;
+      border-radius: 10px;
+      p {
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.basicsDivider {
+  border-bottom: #0c83464d solid 2px;
+  border-radius: 10px;
+  margin: 80px 4vw 20px;
+}
+
+.basicsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .basicsText {
+    color: $fourthAccent;
+    text-align: center;
+    width: 100%;
+
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .panelContainer {
+    display: flex;
+    padding: 30px 50px;
+    margin-left: -20px;
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $panelBG;
+      border-radius: 20px;
+
+      margin-left: 20px;
+      padding: 20px 20px;
+
+      .panelLink a:hover {
+        color: inherit;
+      }
+
+      .panelIcon {
+        color: $firstAccent;
+      }
+
+      .panelHeader {
+        margin-top: 14px;
+        color: #0b0a0b;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .panelDesc {
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: $black;
+      }
+
+      .panelLink {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        transform: translateX(0px);
+        transition: transform 500ms ease-out;
+        color: $black;
+
+        &:hover {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
+
+.advancedPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  .advancedText {
+    color: $secondAccent;
+    text-align: center;
+    width: 100%;
+
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .panelContainer {
+    display: flex;
+    padding: 30px 50px;
+    margin-left: -30px;
+
+    .panelLink a:hover {
+      color: inherit;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $panelBG;
+      border-radius: 20px;
+
+      margin-left: 30px;
+      padding: 20px 20px;
+
+      .panelIcon {
+        color: $firstAccent;
+      }
+
+      .panelHeader {
+        margin-top: 14px;
+        color: #0b0a0b;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .panelDesc {
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: $black;
+      }
+
+      .panelLink {
+        margin-top: 16px;
+        font-weight: 600;
+        color: $black;
+        font-size: 20px;
+        transform: translateX(0px);
+        transition: transform 500ms ease-out;
+
+        &:hover {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
