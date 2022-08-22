@@ -1,7 +1,9 @@
+import Navbar from "../components/Navbar";
+
 export default function About() {
   return (
     <div>
-      <p>Hello world!</p>
+      <Navbar signedIn={true} />
     </div>
   );
 }

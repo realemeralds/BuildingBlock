@@ -10,6 +10,8 @@ import Level3 from "./routes/Level3";
 import Level4 from "./routes/Level4";
 import Level5 from "./routes/Level5";
 import Level6 from "./routes/Level6";
+import SignIn from "./routes/SignIn";
+import SignUp from "./routes/SignUp";
 import "./styles/App.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,6 +21,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="level1" element={<Level1 />} />
         <Route path="level2" element={<Level2 />} />
         <Route path="level3" element={<Level3 />} />

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCubes } from "@fortawesome/free-solid-svg-icons";
+import { faCubes, faCoins } from "@fortawesome/free-solid-svg-icons";
 import placeholderPerson from "../assets/placeholder.png";
 
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({ signedIn, points = 0 }) => {
   const location = useLocation();
   let [activeNavIndex, setActiveNavIndex] = useState(0);
 
@@ -16,6 +16,8 @@ export const Navbar = () => {
       setActiveNavIndex(0);
     } else if (location.pathname === "/about") {
       setActiveNavIndex(1);
+    } else {
+      setActiveNavIndex(2);
     }
   }, [location, activeNavIndex]);
 
@@ -23,7 +25,7 @@ export const Navbar = () => {
     <div>
       <nav className="navbar">
         <button className="headerLogo">
-          <FontAwesomeIcon icon={faCubes} size="3x" className="headerIcon" />
+          <FontAwesomeIcon icon={faCubes} className="headerIcon" />
           <p className="headerLogoText">
             Block<span className="headerAccent">Bro</span>
           </p>
@@ -48,14 +50,19 @@ export const Navbar = () => {
             src={placeholderPerson}
             alt="placeholder"
           />
-          <div className="signInButton">
+          <Link to="/signin" className="signInButton" hidden={signedIn}>
             <p className="signInText">Sign In</p>
-          </div>
-          <div className="signUpButton">
+          </Link>
+          <Link to="/signup" className="signUpButton" hidden={signedIn}>
             <p className="signUpText">Sign Up</p>
+          </Link>
+          <div className="points" hidden={!signedIn}>
+            <FontAwesomeIcon icon={faCoins} className="pointsIcon" />
+            <p className="pointsText">{points} coins</p>
           </div>
         </div>
       </nav>
+      <div style={{ height: 60 }}></div>
     </div>
   );
 };

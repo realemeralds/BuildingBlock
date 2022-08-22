@@ -1,16 +1,15 @@
-import CodeBlock from "../components/CodeBlock";
+import Navbar from "../components/Navbar";
+import TopLinks from "../components/TopLinks";
+import Header from "../components/LevelHeader";
+import Body from "../components/LevelBody";
 
 export default function Level1() {
-  const code = "epic";
-
   return (
-    <div>
-      <p>Hello world!</p>
-      <CodeBlock
-        language="js"
-        showLineNumbers={true}
-        text={`console.log("hello world")`}
-      />
+    <div className="level">
+      <Navbar />
+      <TopLinks levelIndex={1} />
+      <Header />
+      <Body />
     </div>
   );
 }
