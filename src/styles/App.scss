@@ -100,7 +100,7 @@ $panelBG: #cbd2fb;
     }
 
     .active {
-      color: $black  !important;
+      color: $black !important;
     }
   }
 
@@ -391,7 +391,7 @@ $panelBG: #cbd2fb;
 
     .question {
       padding: 15px 0;
-      border: 0px solid #0C83464D;
+      border: 0px solid #0c83464d;
       border-width: 2px 0px;
       width: 750px;
 
@@ -441,18 +441,18 @@ $panelBG: #cbd2fb;
               margin-right: 10px;
             }
 
-            &:hover+.radio {
-              background-color: #CCC;
+            &:hover + .radio {
+              background-color: #ccc;
             }
 
             .text {
               font-weight: 500;
               font-size: 20px;
-              color: $black
+              color: $black;
             }
 
-            .radio:focus+.text {
-              color: $white
+            .radio:focus + .text {
+              color: $white;
             }
           }
         }
@@ -489,18 +489,48 @@ $panelBG: #cbd2fb;
   display: flex;
   padding-top: 65px;
   height: 100vh;
-  background-color: #F4F9FD;
+  background-color: #f4f9fd;
   justify-content: center;
   align-items: center;
 
   font-family: Inter;
 
   .formWrapper {
-    background-color: #FFF;
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
     width: 400px;
   }
+}
 
+.profile {
+  display: flex;
+  height: calc(100vh - 65px);
+  width: 100vw;
+
+  .loginButton {
+    background-color: $signUpBG;
+    padding: 16px;
+    border-radius: 12px;
+    height: min-content;
+
+    &.loading {
+      background-color: $fadedBackground;
+    }
+
+    .loginText {
+      font-size: 20px;
+      color: $white;
+    }
+
+    .loadingText {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+
+  .addressDisplay {
+    font-size: 30px;
+  }
 }
