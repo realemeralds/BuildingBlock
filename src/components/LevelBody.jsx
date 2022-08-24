@@ -1,5 +1,5 @@
-import Answer from "./Answer";
 import CodeBlock from "../components/CodeBlock";
+import Poll from "./Poll";
 
 export default function Body() {
   return (
@@ -12,21 +12,13 @@ export default function Body() {
           dignissimos quas?
         </p>
       </div>
-      <div className="question">
-        <div className="questionHeading">
-          <p className="header">Q:</p>
-          <div className="text">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div className="answerContainer">
-          {Array(4)
-            .fill(0)
-            .map(() => (
-              <Answer text={"Lorem ipsum dolor sit amet."} />
-            ))}
-        </div>
-      </div>
+      <Poll
+        question={"lorem4"}
+        answers={["hey", "hi", "yo", "cry"]}
+        points={50}
+        correct={3}
+        id={0}
+      />
       <div className="textWithCode">
         <div className="textCodeBody">
           <p className="textHeading">Heading</p>

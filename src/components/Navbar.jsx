@@ -6,14 +6,20 @@ import placeholderPerson from "../assets/placeholder.png";
 import { useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import SignInButton from "./SignInButton";
-import { NavbarContext } from "../App";
+import { NavbarContext, AddressContext, WalletContext } from "../App";
 import SignOutButton from "./SignOutButton";
 
-export const Navbar = ({ points = 0 }) => {
+export const Navbar = () => {
   const { navbar: signedIn } = useContext(NavbarContext);
-  console.log(signedIn);
+  const { address } = useContext(AddressContext);
+  const { wallet } = useContext(WalletContext);
+
   const location = useLocation();
   let [activeNavIndex, setActiveNavIndex] = useState(0);
+
+  useEffect(() => {
+    console.log(wallet);
+  }, [wallet]);
 
   useEffect(() => {
     console.log(location.pathname);
@@ -29,24 +35,18 @@ export const Navbar = ({ points = 0 }) => {
   return (
     <div>
       <nav className="navbar">
-        <button className="headerLogo">
+        <Link to="/" className="headerLogo">
           <FontAwesomeIcon icon={faCubes} className="headerIcon" />
           <p className="headerLogoText">
-            Block<span className="headerAccent">Bro</span>
+            Building<span className="headerAccent">Block</span>
           </p>
-        </button>
+        </Link>
         <div className="headerNavigation">
           <Link
             className={`headerLink ${activeNavIndex === 0 ? "active" : ""}`}
             to="/"
           >
             Home
-          </Link>
-          <Link
-            className={`headerLink ${activeNavIndex === 1 ? "active" : ""}`}
-            to="/about"
-          >
-            About
           </Link>
         </div>
         <div className="headerEndContainer">
@@ -56,10 +56,12 @@ export const Navbar = ({ points = 0 }) => {
             alt="placeholder"
           />
           <SignInButton hidden={signedIn} />
-          <div className="points" hidden={!signedIn}>
-            <FontAwesomeIcon icon={faCoins} className="pointsIcon" />
-            <p className="pointsText">{points} coins</p>
-          </div>
+          <a href={`https://testnet.bscscan.com/address/${address}`}>
+            <button className="points" hidden={!signedIn}>
+              <FontAwesomeIcon icon={faCoins} className="pointsIcon" />
+              <p className="pointsText">{wallet} coins</p>
+            </button>
+          </a>
           <SignOutButton hidden={!signedIn} />
         </div>
       </nav>

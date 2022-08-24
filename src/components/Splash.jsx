@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Splash = () => (
   <div className="splash">
     <div className="splashTextContainer">
-      <p className="splashText">Learn Web3 - without the BS.</p>
+      <p className="splashText">Learn Web3 - like never before.</p>
     </div>
     <div className="splashSide">
       <p className="splashSideText">

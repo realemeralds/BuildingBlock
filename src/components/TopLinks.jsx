@@ -27,7 +27,7 @@ export default function TopLinks({ levelIndex }) {
           pointerEvents: levelIndex < 6 ? undefined : "none",
         }}
       >
-        <p>Back to: Level {levelIndex + 1}</p>
+        <p>Jump to: Level {levelIndex + 1}</p>
         <FontAwesomeIcon className="icon" icon={faChevronRight} />
       </Link>
     </div>

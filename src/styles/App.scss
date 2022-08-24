@@ -66,6 +66,7 @@ $panelBG: #cbd2fb;
   left: 0;
   width: 100%;
   padding: 12px 20px;
+  z-index: 10000;
 
   background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
 
@@ -97,11 +98,8 @@ $panelBG: #cbd2fb;
     flex-direction: row;
     justify-content: center;
     justify-self: center;
-    margin-left: -40px;
 
     .headerLink {
-      margin-left: 40px;
-
       text-align: center;
       color: $greyFaded;
       font-size: 16px;
@@ -323,6 +321,7 @@ $panelBG: #cbd2fb;
     align-items: center;
 
     width: 1000px;
+    margin-bottom: 20px;
 
     .headerText {
       display: flex;
@@ -359,7 +358,7 @@ $panelBG: #cbd2fb;
     width: 900px;
 
     .textBody {
-      padding: 40px 100px;
+      padding: 30px 100px;
 
       .textHeading {
         font-size: 34px;
@@ -368,6 +367,7 @@ $panelBG: #cbd2fb;
 
       .textBodyMain {
         font-size: 22px;
+        line-height: 1.2;
       }
     }
 
@@ -376,12 +376,18 @@ $panelBG: #cbd2fb;
       border: 0px solid #0c83464d;
       border-width: 2px 0px;
       width: 750px;
+      margin-top: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       .questionHeading {
         display: flex;
         justify-content: start;
         margin-bottom: 4px;
         padding: 10px 30px;
+        align-items: center;
 
         align-self: stretch;
 
@@ -390,6 +396,7 @@ $panelBG: #cbd2fb;
           font-size: 44px;
           color: $fourthAccent;
           width: auto;
+          margin: 0;
           margin-right: 16px;
         }
 
@@ -405,6 +412,7 @@ $panelBG: #cbd2fb;
       .answerContainer {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .answerWrapper {
           border-radius: 16px;
@@ -438,6 +446,31 @@ $panelBG: #cbd2fb;
             }
           }
         }
+      }
+
+      .questionSubmit {
+        margin-top: 20px;
+        background-color: $signUpBG;
+        padding: 15px 20px;
+        border-radius: 8px;
+        height: min-content;
+
+        display: flex;
+        width: min-content;
+        align-self: center;
+
+        .questionText {
+          font-size: 24px;
+          color: $white;
+          font-weight: 600;
+        }
+      }
+
+      .confirmText {
+        margin-top: 15px;
+        color: $fourthAccent;
+        font-size: 16px;
+        font-weight: 600;
       }
     }
 

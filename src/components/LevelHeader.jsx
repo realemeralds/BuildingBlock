@@ -1,17 +1,10 @@
-import placeholder from "../assets/casper.png";
-
-export default function Header() {
+export default function Header({ title, text, image }) {
   return (
     <div className="header">
       <div className="headerText">
-        <p className="headerTitle">Level 1: What is Web3 even?</p>
-        <p className="headerSubtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-          voluptatem autem tempora cum explicabo sunt eos reprehenderit iusto
-          dignissimos quas?
-        </p>
+        <p className="headerTitle">{title}</p>
+        <p className="headerSubtitle">{text}</p>
       </div>
-      <img className="headerImage" src={placeholder} alt="placeholder" />
     </div>
   );
 }
