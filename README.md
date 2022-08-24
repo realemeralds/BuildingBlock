@@ -4,8 +4,6 @@
 
 > BuildingBlock is a dApp with aims to minimise friction in onboarding process, through a unique, interactive website.
 
-**Hosted @ <insert link>**
-
 ## Installation
 
 ```
