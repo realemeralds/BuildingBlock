@@ -1,9 +1,10 @@
 # BuildingBlock
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-BuildingBlock is a dApp with aims to minimise friction in onboarding process, through a unique, interactive website.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) \
 
-Hosted @ <insert link>
+> BuildingBlock is a dApp with aims to minimise friction in onboarding process, through a unique, interactive website.
+
+**Hosted @ <insert link>**
 
 ## Installation
 
