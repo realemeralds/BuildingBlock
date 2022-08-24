@@ -4,9 +4,14 @@ import { faCubes, faCoins } from "@fortawesome/free-solid-svg-icons";
 import placeholderPerson from "../assets/placeholder.png";
 
 import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import SignInButton from "./SignInButton";
+import { NavbarContext } from "../App";
+import SignOutButton from "./SignOutButton";
 
-export const Navbar = ({ signedIn, points = 0 }) => {
+export const Navbar = ({ points = 0 }) => {
+  const { navbar: signedIn } = useContext(NavbarContext);
+  console.log(signedIn);
   const location = useLocation();
   let [activeNavIndex, setActiveNavIndex] = useState(0);
 
@@ -50,16 +55,12 @@ export const Navbar = ({ signedIn, points = 0 }) => {
             src={placeholderPerson}
             alt="placeholder"
           />
-          <Link to="/signin" className="signInButton" hidden={signedIn}>
-            <p className="signInText">Sign In</p>
-          </Link>
-          <Link to="/signup" className="signUpButton" hidden={signedIn}>
-            <p className="signUpText">Sign Up</p>
-          </Link>
+          <SignInButton hidden={signedIn} />
           <div className="points" hidden={!signedIn}>
             <FontAwesomeIcon icon={faCoins} className="pointsIcon" />
             <p className="pointsText">{points} coins</p>
           </div>
+          <SignOutButton hidden={!signedIn} />
         </div>
       </nav>
       <div style={{ height: 60 }}></div>

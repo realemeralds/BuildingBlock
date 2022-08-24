@@ -1,0 +1,73 @@
+$headerAccent: #be97c6;
+
+
+.metalinkButton {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-color: #fff;
+    border: 1px solid $headerAccent;
+    border-radius: 8px;
+    padding: 8px 14px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: all 500ms ease-out;
+
+    align-items: center;
+
+    &:hover {
+        transform: translateY(-3px);
+        filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.25));
+
+    }
+
+    .metalinkLogo {
+        max-width: 32px;
+    }
+
+    .metalinkText {
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 10px;
+        width: 200px;
+    }
+}
+
+.errorText {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #A63446;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px auto;
+
+    .btn-close {
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .modalHeader {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .modalSubheader {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgb(174, 174, 174);
+        text-align: center;
+    }
+
+    .loginContainer {
+        margin: 20px 0
+    }
+}
