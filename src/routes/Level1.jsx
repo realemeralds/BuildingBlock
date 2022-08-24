@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import TopLinks from "../components/TopLinks";
 import Header from "../components/LevelHeader";
+import Image from "../assets/one.jpg";
 import Poll from "../components/Poll";
-import CodeBlock from "../components/CodeBlock";
 export default function Level1() {
   return (
     <div className="level">
@@ -12,6 +12,7 @@ export default function Level1() {
         title={"Level 1: Introduction to Web3.0"}
         text="At this level, you will be learning the evolution of web, relevance,
             drawbacks as well as some common misconceptions."
+        image={Image}
       />
       <div className="body">
         <div className="textBody">

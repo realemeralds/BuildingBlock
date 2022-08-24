@@ -76,8 +76,6 @@ export default function Poll({ question, answers, points, correct, id }) {
   };
 
   const answerClickHandler = (index) => {
-    console.log("clicked on");
-    console.log(index);
     setIndex(index);
   };
 
@@ -104,7 +102,7 @@ export default function Poll({ question, answers, points, correct, id }) {
         <p className="questionText">Submit</p>
       </button>
       <p hidden={!completed} className="confirmText">
-        Correct!
+        Correct! Here's 20 tokens (wait a bit)!
       </p>
     </div>
   );

@@ -3,6 +3,7 @@ import TopLinks from "../components/TopLinks";
 import Header from "../components/LevelHeader";
 import Poll from "../components/Poll";
 import CodeBlock from "../components/CodeBlock";
+import Image from "../assets/four.png";
 
 export default function Level4() {
   return (
@@ -12,6 +13,7 @@ export default function Level4() {
       <Header
         title={"Level 4 : Introduction and writing smart contracts "}
         text="At this level, you will learn how to write smart contracts."
+        image={Image}
       />
       <div className="body">
         <div className="textBody">

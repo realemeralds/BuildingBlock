@@ -43,9 +43,10 @@ export default function App() {
   const localStorageConnected = window?.localStorage?.getItem("notAnAddress");
 
   useEffect(() => {
-    if (isConnect && localStorageConnected && address) {
+    if (isConnect && localStorageConnected) {
       setAddress(localStorageConnected);
       setNavbar(true);
+      if (!address) return;
       axios
         .get(
           `https://flower-express-backend.herokuapp.com/balance?address=${address}`

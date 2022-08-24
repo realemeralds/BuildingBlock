@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import TopLinks from "../components/TopLinks";
 import Header from "../components/LevelHeader";
 import Poll from "../components/Poll";
-import CodeBlock from "../components/CodeBlock";
+import Image from "../assets/two.png";
 
 export default function Level2() {
   return (
@@ -12,6 +12,7 @@ export default function Level2() {
       <Header
         title={"Level 2: Using MetaMask"}
         text="At this level, you will be learning about cryptowallets, their functions and how to get and use Metamask."
+        image={Image}
       />
       <div className="body">
         <div className="textBody">
@@ -31,30 +32,30 @@ export default function Level2() {
         <div className="textBody">
           <p className="textHeading">Creating a MetaMask Account</p>
           <p className="textBodyMain">
-            Step 1: <br />
+            <u>Step 1:</u> <br />
             Open your Google Chrome and make sure you are connected to your
             Google account
             <br />
             <br />
-            Step 2:
+            <u>Step 2:</u>
             <br />
             Go to the Google Chrome webstore
             https://chrome.google.com/webstore/category/extensions
             <br />
             <br />
-            Step 3: <br />
+            <u>Step 3:</u> <br />
             Search for Metamask on the Chrome Webstore
             <br />
             <br />
-            Step 4: <br />
+            <u>Step 4:</u> <br />
             Add Metamask to Chrome
             <br />
             <br />
-            Step 5: <br />
+            <u>Step 5:</u> <br />
             Create a new Wallet on Metamask
             <br />
             <br />
-            Step 6: <br />
+            <u>Step 6:</u> <br />
             Record down the secret recovery phrase, this is important as it is
             the only way to recover your account in case of forgotten password.
           </p>

@@ -9,9 +9,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const icons1 = [faCubes, faWallet, faCodeBranch];
-const descriptions1 = ["lorem", "lorem", "lorem"];
+const descriptions1 = [
+  `Aim of this lesson:
+  - An overview of the purpose and relevance of Web3.`,
+  `Aim of this lesson:
+  - Learn how and why to use a cryptowallet.`,
+  `Aim of this lesson:
+  - Understand how ether.js and node.js works.`,
+];
 const icons2 = [faFileContract, faTerminal, faTerminal];
-const descriptions2 = ["lorem", "coming soon...!", "coming soon...!"];
+const descriptions2 = [
+  "Aim of this lesson:\n- In-depth guide into smart contracts and dApps",
+  "coming soon...!",
+  "coming soon...!",
+];
 
 const LinksToLevels = () => (
   <>

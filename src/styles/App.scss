@@ -263,13 +263,14 @@ $panelBG: #cbd2fb;
       color: #0b0a0b;
       font-size: 36px;
       font-weight: 700;
+      margin-bottom: 30px;
     }
 
     .panelDesc {
-      margin-top: 15px;
       font-size: 20px;
       text-align: center;
       color: $black;
+      line-height: 1.2;
     }
 
     .panelLink {
@@ -478,6 +479,7 @@ $panelBG: #cbd2fb;
       padding: 40px 0px;
       margin: 0 -30px;
       display: flex;
+      align-items: center;
 
       .textCodeBody {
         margin-left: 50px;

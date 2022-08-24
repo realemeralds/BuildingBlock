@@ -9,7 +9,7 @@ const Splash = () => (
       <p className="splashSideText">
         Blockchain should be accessible, jargon-free, and easy to learn.
       </p>
-      <Link to="/signup">
+      <Link to="/level1">
         <button className="splashButton">
           <p>Dive right in.</p>
         </button>

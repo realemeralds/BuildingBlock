@@ -41,14 +41,6 @@ export const Navbar = () => {
             Building<span className="headerAccent">Block</span>
           </p>
         </Link>
-        <div className="headerNavigation">
-          <Link
-            className={`headerLink ${activeNavIndex === 0 ? "active" : ""}`}
-            to="/"
-          >
-            Home
-          </Link>
-        </div>
         <div className="headerEndContainer">
           <img
             className="userImage"

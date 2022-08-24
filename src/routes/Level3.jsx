@@ -3,6 +3,7 @@ import TopLinks from "../components/TopLinks";
 import Header from "../components/LevelHeader";
 import Poll from "../components/Poll";
 import CodeBlock from "../components/CodeBlock";
+import Image from "../assets/three.png";
 
 const code = `const { ethers } = require("ethers");
 const provider = new ethers.getDefaultProvider("mainnet");
@@ -27,6 +28,7 @@ export default function Level3() {
       <Header
         title={"Level 3: Ether.js and Node.js"}
         text="At this level you will understand how ether.js and node.js works."
+        image={Image}
       />
       <div className="body">
         <div className="textBody">
@@ -59,31 +61,35 @@ export default function Level3() {
           <div className="textCodeBody">
             <p className="textHeading">Setup Node.js</p>
             <p className="textBodyMain">
-              Step 1 :<br />
+              <u>Step 1:</u>
+              <br />
               Download Node.js Installer using https://nodejs.org/en/download/
               <br />
               <br />
-              Step 2 :<br />
+              <u>Step 2:</u>
+              <br />
               Install Node.js and NPM from Browser. After finish dowloading,
               click run and go to the Node.js Setup Wizard.
               <br />
               <br />
-              Step 3 :<br />
+              <u>Step 3:</u>
+              <br />
               Click Next and the next screen shows the license agreement click
               Next if you agree.
               <br />
               <br />
-              Step 4 :<br />
+              <u>Step 4:</u>
+              <br />
               Click the install button to run the installer after u have chosen
               the location of the installation as well as selection of the
               different components in Node.js
               <br />
               <br />
-              Step 5 :<br />
+              <u>Step 5:</u>
+              <br />
               Open command prompt/Powershell in your computer to verify
-              installation by using: node -v The system should display the
-              Node.js version installed on your system. You can do the same for
-              NPM: npm -v
+              installation, and display the Node.js version installed on your
+              system, <b>using the code on the right</b>
             </p>
           </div>
           <div>

@@ -1,11 +1,5 @@
-import Navbar from "../components/Navbar";
-import TopLinks from "../components/TopLinks";
+import Body from "../components/PlaceholderBody";
 
 export default function Level5() {
-  return (
-    <div className="level">
-      <Navbar />
-      <TopLinks levelIndex={5} />
-    </div>
-  );
+  return <Body index={5} />;
 }

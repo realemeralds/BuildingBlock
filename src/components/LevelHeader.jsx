@@ -5,6 +5,13 @@ export default function Header({ title, text, image }) {
         <p className="headerTitle">{title}</p>
         <p className="headerSubtitle">{text}</p>
       </div>
+      <img
+        className="headerImage"
+        src={image}
+        alt="Header"
+        width={348}
+        height={348}
+      />
     </div>
   );
 }
